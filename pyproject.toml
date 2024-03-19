@@ -11,7 +11,7 @@ requires-python = ">=3.8"
 license = "MIT"
 keywords = []
 authors = [
-  { name = "Alex Porter", email = "bomber8013@gmail.com" },
+  { name = "Alex Porter", email = "awrporter91@gmail.com" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -27,9 +27,9 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/unknown/lorrel-py#readme"
-Issues = "https://github.com/unknown/lorrel-py/issues"
-Source = "https://github.com/unknown/lorrel-py"
+Documentation = "https://github.com/alexporter8013/lorrel-py#readme"
+Issues = "https://github.com/alexporter8013/lorrel-py/issues"
+Source = "https://github.com/alexporter8013/lorrel-py"
 
 [tool.hatch.version]
 path = "src/lorrel_py/__about__.py"
