@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "lorrel-py"
@@ -8,7 +8,6 @@ dynamic = ["version"]
 description = 'Example project for integrating Dafny into another language'
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
 keywords = []
 authors = [
   { name = "Alex Porter", email = "awrporter91@gmail.com" },
@@ -24,7 +23,12 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "lorrel_py.__version__"}
 
 [project.urls]
 Documentation = "https://github.com/alexporter8013/lorrel-py#readme"
@@ -59,7 +63,14 @@ dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/lorrel_py tests}"
+check = "mypy --strict --install-types --non-interactive {args:src/lorrel_py tests}"
+
+[tool.hatch.envs.lint]
+dependencies = [
+  "ruff>=0.3.3",
+]
+[tool.hatch.envs.lint.scripts]
+check = "mypy --strict --install-types --non-interactive {args:src/lorrel_py tests}"
 
 [tool.coverage.run]
 source_pkgs = ["lorrel_py", "tests"]
