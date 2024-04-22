@@ -1,0 +1,13 @@
+from lorrel_py import Min, Max, MinMax
+
+
+def test_Min():
+    assert Min(1, 2) == 1
+
+
+def test_Max():
+    assert Max(1, 2) == 2
+
+
+def test_MinMax():
+    assert MinMax(1, 2) == (1, 2)
